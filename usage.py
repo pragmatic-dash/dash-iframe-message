@@ -4,8 +4,8 @@ from dash import Dash, callback, html, Input, Output
 app = Dash(__name__)
 
 app.layout = html.Div([
-    dash_iframe_message.IframeMessage(
-        src='https://dash-iframe-message.herokuapp.com/',
+    dash_iframe_message.DashIframeMessage(
+        src='https://platform.dp.tech/login?business=Bohrium&lang=en-us&utm_source=launching',
         height='500px',
         id='input',
     ),
