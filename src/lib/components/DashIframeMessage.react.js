@@ -26,7 +26,7 @@ export default class DashIframeMessage extends Component {
         const contentDoc = `
         <!DOCTYPE html>
         <html style="width:100%; height:100%">
-          <body style="width:100%; height:100%">
+          <body style="width:100%; height:100%; margin: 0px; overflow: hidden;">
             <iframe src="${safeSrc}"
                     style="border: none; width: 100%; height: 100%;">
             </iframe>
@@ -42,7 +42,7 @@ export default class DashIframeMessage extends Component {
         return (
             <iframe
             id={id || ''}
-            srcDoc={contentDoc} style={{border: 'none', width: width || '100%', height: height || '100px'}}/>
+            srcDoc={contentDoc} style={{border: 'none', width: width || '100%', height: height || '100px', margin: '0px', overflow: 'hidden'}}/>
         );
     }
 }
